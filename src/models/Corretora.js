@@ -31,6 +31,7 @@ export default class Corretora extends Model {
       },
     }, {
       sequelize,
+      tableName: 'corretora',
     });
     return this;
   }
