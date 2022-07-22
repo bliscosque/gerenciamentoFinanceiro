@@ -3,9 +3,11 @@ import User from '../models/User';
 class UserController {
   async store(req, res) {
     try {
+      console.log(req.body);
       const novoUser = await User.create(req.body);
       return res.json(novoUser);
     } catch (e) {
+      console.log(e);
       return res.status(400).json({ errors: e.errors.map((err) => err.message) });// BAD REQUEST
     }
   }
