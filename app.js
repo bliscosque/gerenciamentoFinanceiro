@@ -11,6 +11,7 @@ import homeRoutes from './src/routes/homeRoutes';
 import userRoutes from './src/routes/userRoutes';
 import tokenRoutes from './src/routes/tokenRoutes';
 import corretoraRoutes from './src/routes/corretoraRoutes';
+import instituicaoRoutes from './src/routes/instituicaoRoutes';
 
 class App {
   constructor() {
@@ -30,6 +31,7 @@ class App {
     this.app.use('/users/', userRoutes);
     this.app.use('/tokens/', tokenRoutes);
     this.app.use('/corretora/', corretoraRoutes);
+    this.app.use('/instituicao/', instituicaoRoutes);
   }
 }
 
