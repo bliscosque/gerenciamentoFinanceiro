@@ -36,7 +36,7 @@ export default class Corretora extends Model {
     return this;
   }
 
-  /* static associate(models) {
+  static associate(models) {
     this.hasMany(models.Investimento, { foreignKey: 'corretora_id' });
-  } */
+  }
 }

@@ -14,7 +14,7 @@ export default class Investimento extends Model {
       valor: Sequelize.FLOAT,
     }, {
       sequelize,
-      tableName: 'instituicoes',
+      tableName: 'investimentos',
     });
     return this;
   }

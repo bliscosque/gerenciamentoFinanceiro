@@ -7,17 +7,33 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
       },
-      dataInvestimento: {
+      data_investimento: {
         type: Sequelize.DATEONLY,
         allowNull: false,
       },
-      dataVencimento: {
+      data_vencimento: {
         type: Sequelize.DATEONLY,
         allowNull: false,
       },
       valor: {
         type: Sequelize.FLOAT,
         allowNull: false,
+      },
+      corretora_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'corretora',
+          key: 'id',
+        },
+      },
+      instituicao_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'instituicoes',
+          key: 'id',
+        },
       },
       created_at: {
         type: Sequelize.DATE,
