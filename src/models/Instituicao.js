@@ -26,4 +26,8 @@ export default class Instituicao extends Model {
     });
     return this;
   }
+
+/*   static associate(models) {
+    this.hasMany(models.Investimento);
+  } */
 }
